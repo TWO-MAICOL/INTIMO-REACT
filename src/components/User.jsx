@@ -18,7 +18,7 @@ import { Button } from 'primereact/button';
 import { ModalUser } from '../components/ModalUser.jsx';
 // import TOAST primera react library
 import { Toast } from 'primereact/toast';
-
+  
 export const User =  () => {
     // valid usuer for que pueda acceder
     if(!cookies.get('user')){
