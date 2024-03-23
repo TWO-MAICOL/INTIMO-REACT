@@ -9,7 +9,7 @@ const cookies = new Cookies();
 import { Toast } from 'primereact/toast'; 
 // import splitButton de primera react manu para abajo
 import { SplitButton } from 'primereact/splitbutton';
- 
+         
 
 export const Navbar = () => {
       
