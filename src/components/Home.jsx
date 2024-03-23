@@ -9,7 +9,7 @@ import { Rating } from "primereact/rating";
 import { Tag } from "primereact/tag" 
 // import axios para las consultas al server
 import Axios from "axios";
-// icons
+// icons 
 import { BsCart4 } from "react-icons/bs";
 //  inicio of session
 import Cookies from "universal-cookie";
