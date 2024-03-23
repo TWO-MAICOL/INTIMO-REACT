@@ -25,18 +25,6 @@ export const User =  () => {
         window.location.href="./login";
     }
     const [users, setUsers] = useState(null);
-
-    // const [filters, setFilters] = useState({
-    //     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
-    //     id: {
-    //     operator: FilterOperator.AND,
-    //     constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }],
-    //     },
-    //     name: {
-    //     operator: FilterOperator.AND,
-    //     constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }],
-    //     },
-    // });
 // funcion encargada de renderisar la pagina para que este en tiempo real 
     const updateUsers = () => {     
         Axios.get('http://localhost:3000/allUsers')

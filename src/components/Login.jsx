@@ -10,7 +10,7 @@ export const Login = ()=> {
   // valid usuer for que pueda acceder
   if(cookies.get('user')){
     window.location.href="./home";
-  }
+  } 
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
     const [message, setmessage] = useState('');

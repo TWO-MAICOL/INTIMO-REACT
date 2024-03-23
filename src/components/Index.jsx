@@ -11,9 +11,9 @@ import { Carousel } from 'primereact/carousel';
 import { Button } from "primereact/button";
 // import TAG primera REACT
 import { Tag } from 'primereact/tag';
-
+ 
 export const Index = ()=> {
-
+    
       const responsiveOptions = [
           {
               breakpoint: '1199px',
