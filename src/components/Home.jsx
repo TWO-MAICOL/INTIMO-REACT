@@ -40,7 +40,7 @@ export const Home = ()=> {
       default:
         return null;        
     }
-  };
+  };   
 
   const itemTemplate = (product) => {
     
