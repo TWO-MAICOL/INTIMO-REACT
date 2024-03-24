@@ -136,9 +136,9 @@ app.post('/addCategory', (req, res) => {
       })
         
 } )
-app.get('/getProductsPopular', (req, res) => {      
+app.get('/getCategoriPopular', (req, res) => {      
 
-      con.query('SELECT * FROM  populares', (err,result)=> {
+      con.query('SELECT * FROM  productos WHERE categoria_id = 1', (err,result)=> {
           if( err ){
             res.send("No se encontrarron productos porpulares ");           
           }else{

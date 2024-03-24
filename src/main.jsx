@@ -7,6 +7,7 @@ import { Index } from './components/Index.jsx'
 import {Create} from './components/Create.jsx'
 import { Category} from './components/Category.jsx'
 import {User} from './components/User.jsx'
+import {MoreVent} from './components/MoreVent.jsx'
 // ROUTES
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
  
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   { 
     path: "/user",
     element: <User/>,
+  },
+  { 
+    path: "/morevent",
+    element: <MoreVent/>,
   },
 ]);
 

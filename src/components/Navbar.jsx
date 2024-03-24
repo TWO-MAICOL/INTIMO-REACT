@@ -49,7 +49,7 @@ export const Navbar = () => {
           <div className="row">  
               <div className="col-md-12">
                 <div className="fon-20 config-menu">          
-                  <HiMiniBars4 />                    
+                  <HiMiniBars4  />                    
               </div>               
             </div>
           </div>            

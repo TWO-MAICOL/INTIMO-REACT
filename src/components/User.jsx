@@ -12,7 +12,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column'; 
 // import axios para las consultas al server
 import Axios from "axios";
-// import Toast message ASND button
+// import Toast message ASND button 
 import { Button } from 'primereact/button';
 //  imiport modal  add usuer
 import { ModalUser } from '../components/ModalUser.jsx';

@@ -49,10 +49,10 @@ export const ModalUser =  ({name,funcionReload}) => {
                     onClick={() => {setVisible(true) } } 
                 />
                         
-            <Dialog  header="Crear Usuario" visible={visible} style={{ width: '60vw' }} onHide={() => setVisible(false)}>            
+            <Dialog     breakpoints={{ '960px': '75vw', '641px': '100vw' }}  header="Crear Usuario" visible={visible}   onHide={() => setVisible(false)}>            
                  <div className="container-fluid py-4 mt-4  col-12">
                     <div className='row'> 
-                        <div className="card col-md-11 ms-6" >              
+                        <div className="card col-md-12 " >              
                             <div className="card-header font-weight-bolder bg-gradient-dark text-white">
                                 CREAR                   
                             </div>
@@ -64,7 +64,7 @@ export const ModalUser =  ({name,funcionReload}) => {
                                         </div>                         
                                     </div>                                             
                                     <div className='row'>                         
-                                        <div className='form-group col-md-8'>                                        
+                                        <div className='form-group col-md-12'>                                        
                                             <div className="input-group input-group-outline my-3  ">
                                                 <InputText  
                                                     onChange={(e) => setUser(e.target.value)}
@@ -82,9 +82,9 @@ export const ModalUser =  ({name,funcionReload}) => {
                                                     />
                                             </div>
                                         </div>
-                                        <div className="col-md-4">
+                                        <div className="col-md-12 col-12 col-sm-12">
                                             <Button 
-                                                className=" col-md-12 mt-5" 
+                                                className=" col-12  " 
                                                 onClick={saveUser} 
                                                 label="Guardar" 
                                                 rounded

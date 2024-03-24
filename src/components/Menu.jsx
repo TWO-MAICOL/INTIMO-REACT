@@ -56,11 +56,11 @@ export const Menu = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className=" nav-link text-white" to="/ ">   
+          <NavLink className=" nav-link text-white" to="/Morevent">   
             <div className="fon-20 text-white text-center me-2 d-flex align-items-center justify-content-center">
               <HiMiniTruck/>   
             </div>             
-            <span className="nav-link-text ms-1">Mas populares</span>
+            <span className="nav-link-text ms-1">Mas Vendidos</span>
           </NavLink>
         </li>          
         <li className="nav-item">

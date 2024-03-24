@@ -14,3 +14,5 @@ convierte en texto
 - Consulta API todos los usuarios
 
 ESTE PROYECTO SE CREO CON EL FIN DE MEJORAR MIS CAPACIDADES DE PROGRAMAR Y APRENDER MAS PARA PODER CRECEER 
+si esta agostado
+ // disabled={product.estado === "agotado"}

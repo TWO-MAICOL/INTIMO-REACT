@@ -10,7 +10,7 @@ import { Tag } from "primereact/tag"
 // import axios para las consultas al server
 import Axios from "axios";
 // icons 
-import { BsCart4 } from "react-icons/bs";
+import { BsBrush,BsEyeFill  } from "react-icons/bs";
 //  inicio of session
 import Cookies from "universal-cookie";
 const cookies = new Cookies(); 
@@ -49,13 +49,10 @@ export const Home = ()=> {
         <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4  ">
          <div style={{position:'relative'}}>
           <img
-              className="w-9 sm:w-16rem xl:w-9rem shadow-2 block xl:block mx-auto border-round"
+              className="w-5 sm:w-5rem xl:w-5rem shadow-2 block xl:block mx-auto border-round"
               src={`../img/products/${product.routeImg}`}
               alt={product.nombre}                   
-            />    
-            <div style={{position:'absolute'}}>
-               <Rating value={product.estrellas} readOnly cancel={false}></Rating>         
-            </div>        
+            />                       
          </div>           
          
           <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4 border-round">
@@ -63,32 +60,29 @@ export const Home = ()=> {
               <div className="text-2xl font-bold text-900">{product.nombre}</div>
               <div className="flex align-items-center gap-3">
                 <span className="flex align-items-center gap-2">
-                  <i className="">Descripcion: </i>
-                  <span className="font-semibold">{product.descripcion}</span>a
-                </span>
-                <Tag 
+                  <Rating value={product.estrellas} readOnly cancel={false}></Rating>         
+                  <i className="">Descripcion: </i> <BsEyeFill />
+                  {/* <span className="font-semibold">{product.descripcion}</span>                  */}
+                  <Tag 
                   value={product.estado}
                   severity={status(product)}
                 ></Tag>
+                </span>                
               </div>
             </div>              
             <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
               <span className="text-2xl font-semibold">${product.precio}</span>
-            
               <Button              
-                icon={<BsCart4/>}
-                className="p-button-rounded"
-                disabled={product.estado === "agotado"}
-              ></Button>
-              
+                icon={<BsBrush />}
+                className="p-button-rounded"                
+              ></Button>              
             </div>
-          </div>
+          </div> 
         </div>
       </div>
     );
   };
- 
-    
+
     return (
     <>    
      <title> Home </title> 
@@ -116,10 +110,7 @@ export const Home = ()=> {
           </div>
         </div>       
         <Footer/>
-      </main>
-
-
-    
+      </main>    
      
     </>
   )

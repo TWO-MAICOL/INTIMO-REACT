@@ -6,7 +6,7 @@ import Wave from 'react-wavify'
 // IMPORT Carousel OF PRIMERA REACT
 import { Carousel } from 'primereact/carousel';       
 // import axios para las consultas al server
-// import Axios from "axios";
+import Axios from "axios";
 // import BUTTON PRIMERA REACT
 import { Button } from "primereact/button";
 // import TAG primera REACT
@@ -38,14 +38,14 @@ export const Index = ()=> {
 
       const [popular, setPopular] = useState([]); 
 
-      // useEffect(() => { 
-      //   Axios.get('http://localhost:3000/getProductsPopular')
-      //   .then((res) => { 
-      //     setPopular(res.data);     
-      //   })    
-      //   .catch((err)=>{console.log(err)}) 
+      useEffect(() => { 
+        Axios.get('http://localhost:3000/getCategoriPopular')
+        .then((res) => { 
+          setPopular(res.data);     
+        })    
+        .catch((err)=>{console.log(err)}) 
     
-      // }, []);
+      }, []);
 
       const status = (product) => {
         switch (product.estado) {
@@ -63,7 +63,7 @@ export const Index = ()=> {
       return (
           <div className="bg-white border-1 surface-border border-round m-2 text-center py-5 px-3">
               <div className="mb-3">
-                  <img src={`../img/populares/${product.routeImg}`}  className="w-6 shadow-2" />
+                  <img src={`../img/products/${product.routeImg}`}  className="w-6 shadow-2" />
               </div>
               <div>
                   <h4 className="mb-1">{product.nameProduct}</h4>
@@ -99,8 +99,8 @@ export const Index = ()=> {
           <ul>
             <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
             <li><a className="nav-link scrollto" href="#about">About</a></li>
-            <li><a className="nav-link scrollto" href="#features">Trajes</a></li>
-            <li><a className="nav-link scrollto" href="#gallery">Mas populares </a></li>
+            <li><a className="nav-link scrollto" href="#gallery">Trajes</a></li>
+            <li><a className="nav-link scrollto" href="#team">Mas Vendidos </a></li>
             <li><a className="nav-link scrollto" href="#team">lubricantes</a></li>
             <li><a className="nav-link scrollto" href="/login">Admin</a></li>
             {/* <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
@@ -136,7 +136,7 @@ export const Index = ()=> {
         <div className="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
           <div data-aos="zoom-out" className='neon'>
             <h1>Bienvenido a nuestra <span>Sex Shop</span></h1>
-            <h2>Tenemos gran variedad de productos y de muy buena calidad</h2>
+            <h2>Tenemos gran variedadiu de productos y de muy buena calidad</h2>
             <div className="text-center text-lg-start">
               <a href="#about" className="btn-get-started scrollto"> A poco precio, miralos!</a>
             </div>
@@ -531,13 +531,11 @@ export const Index = ()=> {
     <section id="team" className="team">
       <div className="container">
 
-        <div className="section-title" data-aos="fade-up">
-          <h2>Team</h2>
-          <p>Our Great Team</p>
+        <div className="section-title" data-aos="fade-up">          
+          <h2>Nuestros productos mas Destacados</h2>
         </div>
 
         <div className="row" data-aos="fade-left">
-
           <div className="col-lg-3 col-md-6">
             <div className="member" data-aos="zoom-in" data-aos-delay="100">
               <div className="pic"><img src="../img/web/team/team-1.jpg" className="img-fluid" alt=""/></div>
@@ -554,6 +552,66 @@ export const Index = ()=> {
             </div>
           </div>
 
+          <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div className="member" data-aos="zoom-in" data-aos-delay="200">
+              <div className="pic"><img src="../img/web/team/team-2.jpg" className="img-fluid" alt=""/></div>
+              <div className="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <div className="social">
+                  <a href=""><i className="bi bi-twitter"></i></a>
+                  <a href=""><i className="bi bi-facebook"></i></a>
+                  <a href=""><i className="bi bi-instagram"></i></a>
+                  <a href=""><i className="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div className="member" data-aos="zoom-in" data-aos-delay="200">
+              <div className="pic"><img src="../img/web/team/team-2.jpg" className="img-fluid" alt=""/></div>
+              <div className="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <div className="social">
+                  <a href=""><i className="bi bi-twitter"></i></a>
+                  <a href=""><i className="bi bi-facebook"></i></a>
+                  <a href=""><i className="bi bi-instagram"></i></a>
+                  <a href=""><i className="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div className="member" data-aos="zoom-in" data-aos-delay="200">
+              <div className="pic"><img src="../img/web/team/team-2.jpg" className="img-fluid" alt=""/></div>
+              <div className="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <div className="social">
+                  <a href=""><i className="bi bi-twitter"></i></a>
+                  <a href=""><i className="bi bi-facebook"></i></a>
+                  <a href=""><i className="bi bi-instagram"></i></a>
+                  <a href=""><i className="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div className="member" data-aos="zoom-in" data-aos-delay="200">
+              <div className="pic"><img src="../img/web/team/team-2.jpg" className="img-fluid" alt=""/></div>
+              <div className="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <div className="social">
+                  <a href=""><i className="bi bi-twitter"></i></a>
+                  <a href=""><i className="bi bi-facebook"></i></a>
+                  <a href=""><i className="bi bi-instagram"></i></a>
+                  <a href=""><i className="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div className="member" data-aos="zoom-in" data-aos-delay="200">
               <div className="pic"><img src="../img/web/team/team-2.jpg" className="img-fluid" alt=""/></div>
@@ -587,11 +645,11 @@ export const Index = ()=> {
           </div>
 
           <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="member" data-aos="zoom-in" data-aos-delay="400">
-              <div className="pic"><img src="../assets/img/web/team/team-4.jpg" className="img-fluid" alt=""/></div>
+            <div className="member" data-aos="zoom-in" data-aos-delay="300">
+              <div className="pic"><img src="../img/web/team/team-3.jpg" className="img-fluid" alt=""/></div>
               <div className="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>William Anderson</h4>
+                <span>CTO</span>
                 <div className="social">
                   <a href=""><i className="bi bi-twitter"></i></a>
                   <a href=""><i className="bi bi-facebook"></i></a>
@@ -603,7 +661,6 @@ export const Index = ()=> {
           </div>
 
         </div>
-
       </div>
     </section>
 

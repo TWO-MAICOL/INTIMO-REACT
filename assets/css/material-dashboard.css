@@ -5967,6 +5967,17 @@ fieldset:disabled .btn {
 .progress-bar-animated {
   animation: 1s linear infinite progress-bar-stripes;
 }
+/* animiate for tititle page principal */
+ 
+
+
+
+
+
+
+
+
+
 
 @media (prefers-reduced-motion: reduce) {
   .progress-bar-animated {
