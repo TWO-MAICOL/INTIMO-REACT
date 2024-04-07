@@ -145,7 +145,7 @@ export const Category = () => {
           <hr className="dark horizontal my-0"/>
           <div className="card-footer d-flex">                      
         </div>
-            </div>            
+    </div>            
       </div>       
     </div>
   <Footer/>

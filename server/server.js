@@ -142,7 +142,8 @@ app.get('/getCategoriPopular', (req, res) => {
           if( err ){
             res.send("No se encontrarron productos porpulares ");           
           }else{
-            res.send(result);    
+            res.send(result);  
+             
           }
       })
 } )
@@ -177,7 +178,7 @@ app.post('/sendMessage', (req, res) => {
                         },
                   "components": [       
                         {
-                              "type": "header",
+                              "type": "header",  
                               "parameters": [
                                   {
                                       "type": "image",

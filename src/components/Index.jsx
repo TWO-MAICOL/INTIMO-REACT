@@ -11,8 +11,10 @@ import Axios from "axios";
 import { Button } from "primereact/button";
 // import TAG primera REACT
 import { Tag } from 'primereact/tag';
- 
-export const Index = ()=> {
+// libreari primeraReact img 
+import { Image } from 'primereact/image';
+        
+ export const Index = ()=> {
     
       const responsiveOptions = [
           {
@@ -41,7 +43,7 @@ export const Index = ()=> {
       useEffect(() => { 
         Axios.get('http://localhost:3000/getCategoriPopular')
         .then((res) => { 
-          setPopular(res.data);     
+          setPopular(res.data);              
         })    
         .catch((err)=>{console.log(err)}) 
     
@@ -62,12 +64,14 @@ export const Index = ()=> {
     const productTemplate = (product) => {
       return (
           <div className="bg-white border-1 surface-border border-round m-2 text-center py-5 px-3">
-              <div className="mb-3">
-                  <img src={`../img/products/${product.routeImg}`}  className="w-6 shadow-2" />
+              <div className="mb-3">          
+                  <Image src={`../img/products/${product.routeImg}`}
+                   zoomSrc={`../img/products/${product.routeImg}`} 
+                   alt="Image" width="200" height="200" preview />                 
               </div>
               <div>
                   <h4 className="mb-1">{product.nameProduct}</h4>
-                  <h6 className="mt-0 mb-3">${product.price}</h6>
+                  <h6 className="mt-0 mb-3"> $ {product.precio}</h6>
                   <Tag value={product.estado} seversity={status(product)}></Tag>
                   <div className="mt-5 flex flex-wrap gap-2 justify-content-center">
                       <Button icon="pi pi-search" className="p-button p-button-rounded" />
@@ -101,7 +105,7 @@ export const Index = ()=> {
             <li><a className="nav-link scrollto" href="#about">About</a></li>
             <li><a className="nav-link scrollto" href="#gallery">Trajes</a></li>
             <li><a className="nav-link scrollto" href="#team">Mas Vendidos </a></li>
-            <li><a className="nav-link scrollto" href="#team">lubricantes</a></li>
+            <li><a className="nav-link scrollto" href="#descuentosDay">Descuentos</a></li>
             <li><a className="nav-link scrollto" href="/login">Admin</a></li>
             {/* <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
               <ul>
@@ -429,17 +433,17 @@ export const Index = ()=> {
       <div className="container">
 
         <div className="section-title" data-aos="fade-up">         
-          <p> + Populares</p>
+          <p>Trajes</p>
         </div>
      </div>
-        <div className="card bg-dark" >
+        <div className="card bg-dark " >
             <Carousel value={popular} 
-              numVisible={3} 
-              numScroll={1} 
+              numVisible={4} 
+              // numScroll={2} 
               responsiveOptions={responsiveOptions} 
               className="custom-carousel" 
               circular
-              autoplayInterval={2000} 
+              autoplayInterval={3000} 
               itemTemplate={productTemplate} 
             />
         </div>
@@ -665,7 +669,7 @@ export const Index = ()=> {
     </section>
 
     {/* <!-- ======= Pricing Section ======= --> */}
-    <section id="pricing" className="pricing">
+    <section id="descuentosDay" className="pricing">
       <div className="container">
 
         <div className="section-title" data-aos="fade-up">
