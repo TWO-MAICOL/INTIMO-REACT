@@ -426,7 +426,7 @@ import { Image } from 'primereact/image';
           </div>
         </div>
 
-      </div>
+      </div> 
     </section> 
     {/* <!-- ======= MORE POPULY ======= --> */}
     <section id="gallery" className="gallery">

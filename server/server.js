@@ -87,7 +87,7 @@ app.get('/getProducts', (req, res) => {
        
       con.query('SELECT * FROM  productos', (err,result)=> {
          if (result.length > 0) {
-            res.send(result);
+            res.send(result);           
          }else{
             res.send('No se encontraron productos');
          }         

@@ -77,8 +77,7 @@ export const User =  () => {
                     summary: res.data ,                    
                     life: 3000
                   });
-                  updateUsers();          
-                 
+                  updateUsers();         
             })
             .catch((err) =>{console.log(err);})       
         

@@ -49,7 +49,8 @@ export const Category = () => {
             </li>
           </div>         
           <div  className="col-md-6 col-sm-6 col-6 text-center ">          
-             <button onClick={deleCate}  value={e.id} className='btn btn-hover-new text-red'>                
+             <button onClick={deleCate}  value={e.id} className='  btn-hover-new  ' 
+             style={{padding:'10px 20px', backgroundColor:'#ffff' , color:'red', border:'none'}}>                
                 Eliminar
               </button>
           </div>      
